@@ -1,0 +1,30 @@
+' Un usuario con rol administrador puede gestionar los usuarios registrados.
+
+@startuml req7
+
+skinparam {
+    ArrowColor 010047
+    BorderColor 010047
+    ActivityBackgroundColor dedede
+    ActivityBorderColor 010047
+    ActivityFontColor 010047
+    ActivityFontSize 12
+    ArrowFontColor 010047
+    ArrowFontSize 12
+}
+start
+ if(Administrador) then (si)
+  :Acceso concedido;
+ else (no)
+  stop
+ endif
+ repeat: Ver lista de usuarios
+ if(Usuario existe?) then (si)
+  :Modificar o borrar usuario;
+ else (no)
+  :Usuario no existe;
+ endif
+ repeat while (Volver al listado de usuarios) is (si) not (no) 
+ stop
+
+@enduml

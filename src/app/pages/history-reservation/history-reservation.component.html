@@ -1,0 +1,33 @@
+<app-header></app-header>
+<div class="container">
+  <h1>Historial de reservas</h1>
+
+  <div class="container">
+    <h1>Historial de Reservas</h1>
+  
+    <table>
+      <thead>
+        <tr>
+          <th>ID del Portátil</th>
+          <th>Estado del Portátil</th>
+          <th>Fecha de Reserva</th>
+          <th>Hora de inicio Reserva</th>
+          <th>Hora de fin Reserva</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let reservation of reservations">
+          <td>{{ reservation.laptopId }}</td>
+          <td>{{ reservation.reservationState }}</td>
+          <td>{{ reservation.reservationDate ? (reservation.reservationDate | date: 'dd/MM/yyyy') : 'Fecha no disponible' }}</td>
+          <td>{{ reservation.startTime }}</td>
+          <td>{{ reservation.endTime}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  
+</div>
+
+<app-footer></app-footer>
