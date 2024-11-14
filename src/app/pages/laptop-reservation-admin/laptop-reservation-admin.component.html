@@ -1,0 +1,55 @@
+<app-header></app-header>
+<div class="container">
+  <h1>Reserva de portatiles (Admin)</h1>
+  <div class="computer-grid">
+    <div *ngFor="let laptop of Laptop" class="reservation-container">
+        <h3>{{ laptop.name }}</h3>
+      
+        <!-- Campo para ingresar el ID del usuario -->
+        <mat-form-field appearance="fill">
+          <mat-label>ID del Usuario</mat-label>
+          <input
+            matInput
+            type="number"
+            [(ngModel)]="userIdInput[laptop.id]"
+            placeholder="Ingresa el ID del usuario"
+          />
+        </mat-form-field>
+      
+        <!-- Selección de fecha -->
+        <mat-form-field appearance="fill">
+          <mat-label>Selecciona la fecha</mat-label>
+          <input
+            matInput
+            [matDatepicker]="picker"
+            [(ngModel)]="selectedDates[laptop.id]"
+            (dateChange)="updateDate(laptop.id, $event.value)"
+          />
+          <!-- Aquí agregas el botón de calendario -->
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker="matDatepicker"></mat-datepicker>
+        </mat-form-field>
+      
+        <!-- Selección de hora -->
+        <mat-form-field appearance="fill">
+          <mat-label>Selecciona la hora</mat-label>
+          <input
+            matInput
+            [ngxTimepicker]="timepicker"
+            [(ngModel)]="selectedTimes[laptop.id]"
+            readonly
+            (timeSet)="updateTime(laptop.id, $event)"
+          />
+          <ngx-material-timepicker #timepicker></ngx-material-timepicker>
+        </mat-form-field>
+      
+        <!-- Botón de reserva -->
+        <button mat-raised-button color="primary" (click)="reserveLaptop(laptop.id)">
+          Apartar
+        </button>
+      </div>
+  </div>
+</div>
+
+<app-footer></app-footer>
+

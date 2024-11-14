@@ -11,6 +11,10 @@ import { SwebokComponent } from './pages/swebok/swebok.component';
 import { DatabaseTablesComponent } from './pages/database-tables/database-tables.component';
 import { ComputerReservationComponent } from './pages/computer-rentals/computer-rentals.component';
 import { HistoryReservationComponent } from './pages/history-reservation/history-reservation.component';
+import { LaptopReservationAdminComponent } from './pages/laptop-reservation-admin/laptop-reservation-admin.component';
+import { HistoryReservationActiveAdminComponent } from './pages/history-reservation-active-admin/history-reservation-active-admin.component';
+import { CancelReservationComponent } from './pages/cancel-reservation/cancel-reservation.component';
+import { HelpComponent } from './pages/help/help.component';
 
 
 export const routes: Routes = [
@@ -28,7 +32,11 @@ export const routes: Routes = [
 
     // dropdown menu routes
     { path: "laptop-reservation", component: LaptopReservationComponent },
-    { path: "history-reservarion", component: HistoryReservationComponent},
+    { path: "history-reservation", component: HistoryReservationComponent},
+    { path: "laptop-reservation-admin", component: LaptopReservationAdminComponent},
+    { path: "history-reservation-active-admin", component: HistoryReservationActiveAdminComponent},
+    { path: "cancel-reservation", component: CancelReservationComponent},
+    { path: "help", component: HelpComponent},
     {
         path: 'scrum-team', component: TeamPageComponent
     },

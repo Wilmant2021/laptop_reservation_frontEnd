@@ -1,0 +1,23 @@
+<app-header></app-header>
+<div class="container">
+    <h1>Aqui puedes cancelar tu reserva</h1>
+    <div class="computer-grid">
+    <div *ngIf="reservation; else noReservation">
+    <p><strong>Id:</strong> {{ reservation.id }}</p>
+    <p><strong>Fecha:</strong> {{ reservation.date }}</p>
+    <p><strong>Hora de inicio:</strong> {{ reservation.startTime }}</p>
+    <p><strong>Hora de fin:</strong> {{ reservation.endTime }}</p>
+  
+    <button (click)="cancelReservation()" class="btn btn-danger">
+      Cancel Reservation
+    </button>
+  </div>
+  
+  <ng-template #noReservation>
+    <p>No active reservation found.</p>
+  </ng-template>
+    </div>  
+  
+</div>
+
+<app-footer></app-footer>
