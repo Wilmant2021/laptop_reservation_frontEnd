@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { HeaderComponent } from '../../components/header/header.component';
 import { FooterComponent } from '../../components/footer/footer.component';
+import { StudentHeaderComponent } from '../../components/student-header/student-header.component';
 
 
 @Component({
@@ -10,7 +11,8 @@ import { FooterComponent } from '../../components/footer/footer.component';
   standalone: true,
   imports: [HeaderComponent,
     FooterComponent,
-    CommonModule
+    CommonModule, 
+    StudentHeaderComponent
   ],
   templateUrl: './cancel-reservation.component.html',
   styleUrls: ['./cancel-reservation.component.css']

@@ -9,6 +9,7 @@ import { CommonModule } from '@angular/common';  // Importa CommonModule
 
 import { HeaderComponent } from '../../components/header/header.component';
 import { FooterComponent } from '../../components/footer/footer.component';
+import { AdminHeaderComponent } from '../../components/admin-header/admin-header.component';
 
 interface Laptop {
   id: number;
@@ -28,7 +29,8 @@ interface Laptop {
     NgxMaterialTimepickerModule,
     CommonModule,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    AdminHeaderComponent
   ],
   templateUrl: './laptop-reservation-admin.component.html',
   styleUrls: ['./laptop-reservation-admin.component.css'],

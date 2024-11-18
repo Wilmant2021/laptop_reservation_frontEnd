@@ -1,0 +1,58 @@
+<header class="header_section">
+	<div class="container-fluid">
+		<nav class="navbar navbar-expand-lg custom_nav-container">
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav">
+					<li class="dropdown nav-item">
+						<button
+							class="btn dropdown-toggle nav-link {{['/requeriments','/scrum-team','/swebok', '/database-tables'].includes(location)?'active-dropdown':''}}"
+							type="button"
+							data-bs-toggle="dropdown"
+							aria-expanded="false"
+						>
+							Reservation Project
+						</button>
+						<ul class="dropdown-menu">
+							<li>
+								<a
+									class="dropdown-item {{location=='/laptop-reservation'?'active':''}}"
+									type="button"
+									href="/laptop-reservation"
+									>Laptop Reservation</a
+								>
+							</li>
+							<li>
+								<a
+									class="dropdown-item {{location=='/cancel-reservation'?'active':''}}"
+									type="button"
+									href="/cancel-reservation"
+								>
+									Cancel reservation</a
+								>
+							</li>
+							<li>
+								<a
+									class="dropdown-item {{location=='/history-reservation'?'active':''}}"
+									type="button"
+									href="/history-reservation"
+									>History reservation</a
+								>
+							</li>
+						</ul>
+					</li>
+
+					<li class="nav-item {{location=='/help'?'active':''}}">
+						<a class="nav-link" href="/help"> Help</a>
+					</li>
+                    <li class="nav-item {{location=='/logout'?'active':''}}">
+						<a class="nav-link" href="/logout"> Profile</a>
+					</li>
+
+					<li class="nav-item {{location=='/lifecycle'?'active':''}}">
+						<a class="nav-link" href="/lifecycle"></a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+</header>

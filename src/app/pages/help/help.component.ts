@@ -7,6 +7,7 @@ import { RouterModule } from '@angular/router';
 import { TeamComponent } from '../../components/team/team.component';
 import { FooterComponent } from '../../components/footer/footer.component';
 import { HeaderComponent } from '../../components/header/header.component';
+import { StudentHeaderComponent } from '../../components/student-header/student-header.component';
 
 
 @Component({
@@ -16,7 +17,8 @@ import { HeaderComponent } from '../../components/header/header.component';
     RouterModule,
     TeamComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    StudentHeaderComponent
   ],
   templateUrl: './help.component.html',
   styleUrls: ['./help.component.css']

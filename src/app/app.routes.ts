@@ -15,6 +15,9 @@ import { LaptopReservationAdminComponent } from './pages/laptop-reservation-admi
 import { HistoryReservationActiveAdminComponent } from './pages/history-reservation-active-admin/history-reservation-active-admin.component';
 import { CancelReservationComponent } from './pages/cancel-reservation/cancel-reservation.component';
 import { HelpComponent } from './pages/help/help.component';
+import { LogoutComponent } from './pages/auth/logout/logout.component';
+import { CreateLaptopAdminComponent } from './pages/create-laptop-admin/create-laptop-admin.component';
+import { LogoutAdminComponent } from './pages/auth/logout-admin/logout-admin.component';
 
 
 export const routes: Routes = [
@@ -37,6 +40,9 @@ export const routes: Routes = [
     { path: "history-reservation-active-admin", component: HistoryReservationActiveAdminComponent},
     { path: "cancel-reservation", component: CancelReservationComponent},
     { path: "help", component: HelpComponent},
+    { path: "logout", component: LogoutComponent},
+    { path: "logout-admin", component: LogoutAdminComponent},
+    { path: "create-laptop-admin", component: CreateLaptopAdminComponent},
     {
         path: 'scrum-team', component: TeamPageComponent
     },

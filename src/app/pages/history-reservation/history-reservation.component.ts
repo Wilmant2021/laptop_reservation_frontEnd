@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { HeaderComponent } from '../../components/header/header.component';
 import { FooterComponent } from '../../components/footer/footer.component';
+import { StudentHeaderComponent } from '../../components/student-header/student-header.component';
 
 
 interface Reservation {
@@ -18,7 +19,8 @@ interface Reservation {
   standalone: true,
   imports: [HeaderComponent, 
     FooterComponent,
-    CommonModule
+    CommonModule,
+    StudentHeaderComponent
   ],
   templateUrl: './history-reservation.component.html',
   styleUrl: './history-reservation.component.css'

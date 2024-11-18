@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { HeaderComponent } from '../../components/header/header.component';
 import { FooterComponent } from '../../components/footer/footer.component';
+import { AdminHeaderComponent } from '../../components/admin-header/admin-header.component';
 
 interface Reservation {
   laptopId: number;
@@ -17,7 +18,8 @@ interface Reservation {
   standalone: true,
   imports: [HeaderComponent,
     FooterComponent,
-    CommonModule
+    CommonModule,
+    AdminHeaderComponent
   ],
   templateUrl: './history-reservation-active-admin.component.html',
   styleUrls: ['./history-reservation-active-admin.component.css']

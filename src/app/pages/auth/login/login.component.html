@@ -3,7 +3,8 @@
     <div class="card">
         <h4 class="card-header">Login</h4>
         <div class="card-body">
-            <form (ngSubmit)="login()" style="max-width: 700px; min-width: 400px">
+            <!-- Formulario de inicio de sesión -->
+            <form id="loginForm" style="max-width: 700px; min-width: 400px" (ngSubmit)="login()">
                 <div class="form-group row">
                     <label for="email" class="col-4 col-form-label">Email</label>
                     <div class="col-8">
@@ -16,11 +17,10 @@
                             <input
                                 id="email"
                                 name="email"
-                                placeholder="example@example.com"
-                                type="email"
                                 [(ngModel)]="email"
+                                type="email"
                                 class="form-control"
-                                required
+                                required="required"
                             />
                         </div>
                     </div>
@@ -37,22 +37,23 @@
                             <input
                                 id="password"
                                 name="password"
-                                placeholder="***********"
-                                type="password"
                                 [(ngModel)]="password"
+                                type="password"
                                 class="form-control"
-                                required
+                                required="required"
                             />
                         </div>
                     </div>
                 </div>
+                <!-- Mostrar mensaje de error en rojo -->
+                <div *ngIf="errorMessage" class="text-danger mt-2">{{ errorMessage }}</div>
                 <div class="form-group row">
                     <div class="offset-4 col-8">
                         <button name="submit" type="submit" class="btn btn-primary">Aceptar</button>
                     </div>
                 </div>
             </form>
-        </div>
-    </div>
+        </div> <!-- Fin de card-body -->
+    </div> <!-- Fin de card -->
 </section>
 <app-footer></app-footer>
