@@ -47,7 +47,7 @@ export class CreateLaptopAdminComponent {
       'Authorization': `Bearer ${token}` // Agregar el token al encabezado
     };
   
-    this.http.post(this.apiUrl, laptopData).subscribe({
+    this.http.post(this.apiUrl, laptopData, { headers }).subscribe({
       next: (response) => {
         console.log('Portátil creado:', response);
         this.successMessage = 'Portátil creado exitosamente.';
