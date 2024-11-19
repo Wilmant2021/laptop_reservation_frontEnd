@@ -31,7 +31,7 @@ export const routes: Routes = [
     },
     { path: "login", component: LoginComponent },
     { path: "register", component: RegisterComponent },
-    { path: "lifecycle", component: CiclosDeVidaComponent },
+    //{ path: "lifecycle", component: CiclosDeVidaComponent },
 
     // dropdown menu routes
     { path: "laptop-reservation", component: LaptopReservationComponent },
